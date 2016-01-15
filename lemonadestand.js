@@ -14,15 +14,9 @@ function myWeek(){
 		i++;
 		}
 	document.getElementById("demo").innerHTML = text;
+}
 	
 	
-	}
-	
-	
-		
-
-
-
 function conditions(){
 	var changingWeather;
 	for (var i = 0; i < weather.length; i++);
@@ -39,9 +33,6 @@ function weekFeel(){
 
 document.getElementById("startSelling").addEventListener("click", startSelling)
 
-
-
-
 function startSelling(){
 	var cupsSold;
 	var totalCups;
@@ -54,6 +45,7 @@ function startSelling(){
 	var cupsToCust = Number(document.getElementById("cupsToCust").value);
 	var cupPrice = Number(document.getElementById("cupPrice").value);
 	
+	
 	for (var i = 0; i < days.length; i++){
 		cupsSold = Math.floor(temperature[i] / cupPrice);
 		
@@ -65,33 +57,8 @@ function startSelling(){
 	totalCups = cupsSold * totalCups;
 	
 	document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + cupsToCust + " cups of Lemonade for $ " + (cupsToCust * cupPrice) + " </p>";
-	
-	
-	}
+}
 	
 }
 startSelling()
 myWeek();
-/*function multiplySoldByPrice(){
-	
-	
-	var cupsToCust = Number(document.getElementById("cupsToCust").value);
-    var cupPrice = Number(document.getElementById("cupPrice").value);
-
-	var totalCups = cupsToCust * cupPrice;
-	return totalCups;
-	
-	document.getElementById("result").innerHTML += "<p>Your Profit Was " + totalCups + ".</p>";
-}
-
-multiplySoldByPrice();
-	
-	/*function displayResults(cupPrice, totCups,){
-	var profit = cupPrice * cupsSold;
-	
-	document.getElementById()
-}
-
-
-runGame()*/
-
